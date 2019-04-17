@@ -1,6 +1,22 @@
 .page-header {
   //временно
+  min-height: 279px;
   outline: 2px solid red;
-  min-height: 278px;
   //временно
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
+
+.page-header__logo {
+  position: absolute;
+  left: calc(50% - 51px);
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: 56px;
+  }
+}
+
+
