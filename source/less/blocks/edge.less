@@ -1,3 +1,13 @@
+.edge {
+  background-color: @gray;
+}
+
+.edge--white,
+.edge--white {
+  color: @white;
+  background-color: @blue;
+}
+
 .edge__text {
   //временно
   min-height: 211px;
@@ -7,6 +17,11 @@
   padding-right: 27px;
   padding-bottom: 45px;
   padding-left: 28px;
+}
+
+
+.edge--white:nth-child(2) .edge__text{
+  min-height: 191px;
 }
 
 .edge__title {
@@ -28,8 +43,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .edge:nth-child(1),
-  .edge:nth-child(2) {
+  .edge--white,
+  .edge--white {
     display: flex;
     flex-direction: row;
   }
@@ -45,10 +60,10 @@
   .edge__photo {
     flex-grow: 1;
   }
-  .edge:nth-child(2) .edge__photo {
+  .edge--white .edge__photo {
     order: 1;
   }
-  .edge:nth-child(2) .edge__text {
+  .edge--white .edge__text {
     order: 2;
   }
 }
@@ -68,9 +83,7 @@
   }
 }
 
-.edge:nth-child(3),
-.edge:nth-child(4),
-.edge:nth-child(5) {
+.edge--black {
   box-sizing: content-box;
   min-height: 102px;
   padding-top: 33px;
@@ -79,3 +92,24 @@
   padding-bottom: 32px;
 }
 
+@media (min-width: @tablet-width) {
+  .edge--black {
+    width: 256px;
+    box-sizing: border-box;
+    min-height: 256px;
+    padding-top: 50px;
+    padding-left: 49px;
+    padding-right: 48px;
+    padding-bottom: 49px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .edge--black {
+    width: 400px;
+    padding-top: 50px;
+    padding-left: 57px;
+    padding-right: 58px;
+    padding-bottom: 70px;
+  }
+}
