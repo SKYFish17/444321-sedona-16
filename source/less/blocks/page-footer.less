@@ -3,10 +3,17 @@
   min-height: 233px;
   outline: 2px solid red;
   /*временно*/
-  padding-top: 31px;
-  padding-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  //padding-top: 31px;
+  //padding-bottom: 23px;
 }
 
-.page-footer__social {
-  margin-bottom: 40px;
+@media (min-width: @tablet-width) {
+  .page-footer {
+  min-height: 120px;
+  flex-direction: row;
+  align-items: center;
+  }
 }
