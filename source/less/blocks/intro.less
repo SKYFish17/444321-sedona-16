@@ -12,6 +12,21 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .intro {
+    min-height: 518px;
+    &--inner {
+      min-height: 290px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro--inner {
+    min-height: 301px;
+  }
+}
+
 .intro__photo {
   .indent-reset();
 }

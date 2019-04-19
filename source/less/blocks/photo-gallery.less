@@ -1,13 +1,112 @@
+.photo-gallery {
+  /*временно*/
+  outline: 2px solid red;
+  /*временно*/
+}
+
 .photo-gallery__list {
   .indent-reset();
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
   list-style: none;
 }
 
 .photo-gallery__item {
   padding-top: 22px;
   padding-bottom: 23px;
+  /*временно*/
+  outline: 2px solid blue;
+  outline-offset: -3px;
+  /*временно*/
 }
+
+/*временно*/
+.photo-gallery__item:first-child {
+  background-color: lightyellow;
+}
+
+.photo-gallery__item:nth-child(2) {
+  background-color: lightpink;
+}
+
+.photo-gallery__item:nth-child(3) {
+  background-color: lightgreen;
+}
+
+.photo-gallery__item:last-child {
+  background-color: lightblue;
+}
+/*временно*/
 
 .photo-galery__post {
   .indent-reset();
+  position: relative;
+}
+
+.photo-galery__legend {
+  width: 100%;
+}
+
+.photo-gallery__image {
+  margin-bottom: 17px;
+}
+
+.photo-gallery__sign,
+.photo-gallery__author,
+.photo-gallery__like {
+  display: block;
+  text-align: left;
+}
+
+.photo-gallery__sign {
+  margin-bottom: 8px;
+}
+
+.photo-gallery__author {
+  text-transform: none;
+  margin-bottom: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-gallery__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .photo-gallery__item:first-child {
+    width: 648px;
+    height: 480px;
+  }
+  .photo-gallery__item {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 324px;
+    height: 347px;
+  }
+  .photo-galery__legend {
+    background-color: @gray;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-gallery__list {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .photo-gallery__item:first-child {
+    width: 1200px;
+    height: 400px;
+  }
+  .photo-gallery__item {
+    width: 400px;
+    height: 267px;
+  }
+  .photo-galery__legend {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+  }
 }

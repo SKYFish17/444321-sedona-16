@@ -1,9 +1,12 @@
 .booking {
   /*временно*/
-  min-height: 203px;
+  min-height: 287px;
+  box-sizing: border-box;
   outline: 2px solid orange;
   /*временно*/
   padding-top: 33px;
+  padding-right: 20px;
+  padding-left: 20px;
   padding-bottom: 49px;
 }
 
@@ -24,4 +27,24 @@
 .booking__search {
   padding-top: 17px;
   padding-bottom: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .booking {
+    min-height: 318px;
+    padding-top: 57px;
+    padding-right: 155px;
+    padding-left: 155px;
+    padding-bottom: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .booking {
+    min-height: 331px;
+    padding-top: 57px;
+    padding-right: 371px;
+    padding-left: 371px;
+    padding-bottom: 66px;
+  }
 }
