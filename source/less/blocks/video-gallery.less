@@ -2,13 +2,51 @@
   padding-top: 39px;
 }
 
+.video-gallery__text {
+  padding-right: 41px;
+  padding-left: 42px;
+  margin-bottom: 37px;
+}
+
 .video-gallery__comment {
+  display: block;
+  margin-bottom: 28px;
   font-size: 18px;
   font-weight: bold;
 }
 
 .video-gallery__intro {
-  margin-bottom: 40px;
+  .indent-reset();
   line-height: 1.71;
   color: @light-black;
+}
+
+@media (min-width: @tablet-width) {
+  .video-gallery {
+    padding-top: 68px;
+  }
+  .video-gallery__text {
+    padding-right: 176px;
+    padding-left: 177px;
+    margin-bottom: 76px;
+  }
+  .video-gallery__comment {
+    font-size: 30px;
+    line-height: 0.87;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-gallery {
+    padding-top: 72px;
+  }
+  .video-gallery__text {
+    padding-right: 393px;
+    padding-left: 392px;
+    margin-bottom: 76px;
+  }
+  .video-gallery__comment {
+    font-size: 30px;
+    line-height: 0.87;
+  }
 }
