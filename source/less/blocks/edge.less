@@ -52,6 +52,26 @@
   display: block;
 }
 
+.edge {
+  &--black {
+    box-sizing: content-box;
+    padding-top: 27px;
+    padding-left: 41px;
+    padding-right: 41px;
+    padding-bottom: 32px;
+  }
+  &--black:nth-child(2) {
+    padding-top: 23px;
+    padding-bottom: 28px;
+  }
+  &--black:last-child {
+    padding-top: 27px;
+    padding-bottom: 28px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .edge {
     &--white {
@@ -63,15 +83,28 @@
     }
     &--white:nth-child(2) .edge__text {
       order: -1;
+      padding-top: 42px;
+      padding-bottom: 50px;
     }
     &--black {
       width: 256px;
       box-sizing: border-box;
-      min-height: 256px;
-      padding-top: 50px;
+      padding-top: 38px;
       padding-left: 49px;
       padding-right: 48px;
       padding-bottom: 49px;
+    }
+    &--black:nth-child(2) {
+      padding-top: 38px;
+      padding-left: 53px;
+      padding-right: 54px;
+      padding-bottom: 28px;
+    }
+    &--black:last-child {
+      padding-top: 38px;
+      padding-left: 49px;
+      padding-right: 48px;
+      padding-bottom: 28px;
     }
   }
   .edge__text {
@@ -81,10 +114,8 @@
     padding-right: 47px;
     padding-bottom: 44px;
     width: 256px;
-    min-height: 256px;
   }
   .edge__title {
-    width: 161px;
     margin-bottom: 11px;
     font-size: 21px;
     line-height: 1.24;
@@ -97,22 +128,23 @@
   }
 }
 
-.edge {
-  &--black {
-    box-sizing: content-box;
-    min-height: 102px;
-    padding-top: 33px;
-    padding-left: 41px;
-    padding-right: 41px;
-    padding-bottom: 32px;
-  }
-}
-
 @media (min-width: @desktop-width) {
   .edge {
     &--black {
       width: 400px;
-      padding-top: 50px;
+      padding-top: 37px;
+      padding-left: 57px;
+      padding-right: 58px;
+      padding-bottom: 70px;
+    }
+    &--black:nth-child(2) {
+      padding-top: 37px;
+      padding-left: 64px;
+      padding-right: 64px;
+      padding-bottom: 70px;
+    }
+    &--black:last-child {
+      padding-top: 37px;
       padding-left: 57px;
       padding-right: 58px;
       padding-bottom: 70px;
@@ -125,11 +157,11 @@
     padding-right: 67px;
     padding-bottom: 56px;
     width: 400px;
-    min-height: 256px;
   }
   .edge__title {
+    width: 159px;
+    margin: 0 auto;
     margin-bottom: 9px;
-    margin-left: 52px;
   }
   .edge__photo {
     flex-grow: 1;
