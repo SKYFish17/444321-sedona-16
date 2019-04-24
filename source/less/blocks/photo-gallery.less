@@ -1,7 +1,4 @@
 .photo-gallery {
-  /*временно*/
-  outline: 2px solid red;
-  /*временно*/
 }
 
 .photo-gallery__list {
@@ -14,12 +11,28 @@
 }
 
 .photo-gallery__item {
+  position: relative;
   padding-top: 22px;
-  padding-bottom: 23px;
-  /*временно*/
-  outline: 2px solid blue;
-  outline-offset: -3px;
-  /*временно*/
+}
+
+.photo-gallery__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 320px;
+  height: 1px;
+  background-color: @gray;
+}
+
+.photo-gallery__item:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -20px;
+  width: 320px;
+  height: 1px;
+  background-color: @gray;
 }
 
 /*временно*/
@@ -46,11 +59,14 @@
 }
 
 .photo-galery__legend {
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 21px;
   width: 100%;
 }
 
 .photo-gallery__image {
-  margin-bottom: 17px;
+  display: block;
 }
 
 .photo-gallery__sign,
@@ -66,8 +82,24 @@
 
 .photo-gallery__author {
   text-transform: none;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
+
+.photo-gallery__like {
+  position: relative;
+  padding-left: 38px;
+}
+
+.photo-gallery__like:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 23px;
+  height: 21px;
+  background-color: red;
+}
+
 
 @media (min-width: @tablet-width) {
   .photo-gallery__list {
@@ -80,14 +112,48 @@
     width: 648px;
     height: 480px;
   }
+  .photo-gallery__item .photo-gallery__image {
+    margin-bottom: 0;
+  }
+  /*временно*/
+  .photo-gallery__item .photo-gallery__image {
+    height: 267px;
+  }
+  .photo-gallery__item:first-child .photo-gallery__image {
+    height: 400px;
+  }
+  /*временно*/
   .photo-gallery__item {
     padding-top: 0;
     padding-bottom: 0;
     width: 324px;
     height: 347px;
   }
+  .photo-gallery__item::before {
+    display: none;
+  }
+  .photo-gallery__item:last-child::after {
+    display: none;
+  }
   .photo-galery__legend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: @gray;
+  }
+  .photo-gallery__item .photo-galery__legend {
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+  .photo-gallery__item:first-child .photo-galery__legend {
+    padding-left: 20px;
+    padding-right: 21px;
+  }
+  .photo-gallery__item:nth-child(3) .photo-galery__legend {
+    padding-right: 36px;
+  }
+  .photo-gallery__author {
+    margin-bottom: 0;
   }
 }
 

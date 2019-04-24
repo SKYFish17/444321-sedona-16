@@ -1,0 +1,99 @@
+.control-player {
+  position: absolute;
+  box-sizing: border-box;
+  left: 20px;
+  width: 280px;
+  background-color: @gray;
+}
+
+.control-player__position {
+  position: relative;
+  padding-top: 23px;
+  padding-left: 22px;
+  padding-right: 23px;
+  padding-bottom: 23px;
+  display: flex;
+  flex-direction: row;
+}
+
+.control-player__scrolling {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 14px;
+  padding-left: 22px;
+  padding-right: 23px;
+  padding-bottom: 7px;
+  background-color: @black;
+  opacity: 0.6;
+}
+
+.control-player__range {
+  width: 100%;
+}
+
+.control-player__playback {
+  margin-right: auto;
+  width: 16px;
+  height: 20px;
+  border: none;
+}
+
+.control-player__subtitles {
+  margin-right: 31px;
+  width: 32px;
+  height: 20px;
+  border: none;
+}
+
+.control-player__full-screen {
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .control-player {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: @black;
+    opacity: 0.6;
+  }
+  .control-player__position {
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 41px;
+    padding-bottom: 33px;
+  }
+  .control-player__playback {
+    order: -1;
+    margin-right: 42px;
+  }
+  .control-player__scrolling {
+    position: static;
+    order: 0;
+    width: 389px;
+    padding: 0;
+    padding-top: 1px;
+    margin-right: 43px;
+    background-color: transparent;
+    opacity: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .control-player__playback {
+    margin-right: 42px;
+  }
+  .control-player__scrolling {
+    margin-right: 43px;
+    width: 540px;
+  }
+  .control-player__subtitles {
+    margin-right: 31px;
+  }
+
+}

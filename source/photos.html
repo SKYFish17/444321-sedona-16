@@ -54,8 +54,10 @@
               <figure class="photo-galery__post">
                 <img class="photo-gallery__image" src="http://placehold.it/280x280" width="280" height="280" alt="Дорога на закате">
                 <figcaption class="photo-galery__legend">
-                  <b class="photo-gallery__sign">Неродные просторы</b>
-                  <span class="photo-gallery__author">Автор фото: Борис</span>
+                  <div class="photo-gallery__text">
+                    <b class="photo-gallery__sign">Неродные просторы</b>
+                    <span class="photo-gallery__author">Автор фото: Борис</span>
+                  </div>
                   <span class="photo-gallery__like">1350</span>
                 </figcaption>
               </figure>
@@ -64,8 +66,10 @@
               <figure class="photo-galery__post">
                 <img class="photo-gallery__image" src="http://placehold.it/280x280" width="280" height="280" alt="Кактус с жёлтыми цветами">
                 <figcaption class="photo-galery__legend">
-                  <b class="photo-gallery__sign">Местная растительность</b>
-                  <span class="photo-gallery__author">Автор фото: Сергей</span>
+                  <div class="photo-gallery__text">
+                    <b class="photo-gallery__sign">Местная растительность</b>
+                    <span class="photo-gallery__author">Автор фото: Сергей</span>
+                  </div>
                   <span class="photo-gallery__like">143</span>
                 </figcaption>
               </figure>
@@ -74,8 +78,10 @@
               <figure class="photo-galery__post">
                 <img class="photo-gallery__image" src="http://placehold.it/280x280" width="280" height="280" alt="Лесной серпантин">
                 <figcaption class="photo-galery__legend">
-                  <b class="photo-gallery__sign">Дорога на север</b>
-                  <span class="photo-gallery__author">Автор фото: Петр</span>
+                  <div class="photo-gallery__text">
+                    <b class="photo-gallery__sign">Дорога на север</b>
+                    <span class="photo-gallery__author">Автор фото: Петр</span>
+                  </div>
                   <span class="photo-gallery__like">96</span>
                 </figcaption>
               </figure>
@@ -84,8 +90,10 @@
               <figure class="photo-galery__post">
                 <img class="photo-gallery__image" src="http://placehold.it/280x280" width="280" height="280" alt="Дорога на закате">
                 <figcaption class="photo-galery__legend">
-                  <b class="photo-gallery__sign">Мост дьявола</b>
-                  <span class="photo-gallery__author">Автор фото: Антон</span>
+                  <div class="photo-gallery__text">
+                    <b class="photo-gallery__sign">Мост дьявола</b>
+                    <span class="photo-gallery__author">Автор фото: Антон</span>
+                  </div>
                   <span class="photo-gallery__like">254</span>
                 </figcaption>
               </figure>
@@ -99,12 +107,16 @@
           </div>
           <div class="video-gallery__player player">
             <div class="player__content">
-              <img class="player__screensaver" src="http://placehold.it/321x201" width="321" height="201" alt="Видеопрезентация Седоны">
+              <img class="player__screensaver" src="http://placehold.it/321x202" width="321" height="202" alt="Видеопрезентация Седоны">
               <div class="player__control control-player">
-                <input class="control-player__range" type="range" min="0" max="100" value="25">
-                <button class="control-player__playback" type="button">Перемотать назад</button>
-                <button class="control-player__subtitles" type="button">Субтитры</button>
-                <button class="control-player__full-screen" type="button">Во весь экран</button>
+                <div class="control-player__position">
+                  <div class="control-player__scrolling">
+                    <input class="control-player__range" type="range" min="0" max="100" value="25">
+                  </div>
+                    <button class="control-player__playback" type="button"><span class="visually-hidden">Перемотать назад</span></button>
+                    <button class="control-player__subtitles" type="button"><span class="visually-hidden">Субтитры</span></button>
+                    <button class="control-player__full-screen" type="button"><span class="visually-hidden">Во весь экран</span></button>
+                </div>
               </div>
             </div>
           </div>
@@ -116,23 +128,25 @@
       <div class="page-footer__hashtag hashtag">
         <a href="#" class="hashtag__link">#visitSEDONA</a>
       </div>
-      <!--<a href="#" class="page-footer__hashtag">#visitSEDONA</a>-->
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a href="#" class="social__link social__link--twitter">Мы в Твиттере</a>
+            <a href="#" class="social__link social__link--twitter"><span class="visually-hidden">Мы в Твиттере</span></a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link--vkontakte">Мы в Вконтакте</a>
+            <a href="#" class="social__link social__link--vkontakte"><span class="visually-hidden">Мы в Вконтакте</span></a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link--youtube">Мы на Ютубе</a>
+            <a href="#" class="social__link social__link--youtube"><span class="visually-hidden">Мы на Ютубе</span></a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <span class="copyright__text">Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__logo" src="http://placehold.it/27x34"  width="27" height="34" alt="Логотип HTML Academy">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
       </div>
     </footer>
   </div>
