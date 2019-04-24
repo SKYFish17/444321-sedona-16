@@ -1,4 +1,12 @@
+.edge-more {
+  padding-top: 35px;
+  padding-left: 70px;
+  padding-right: 41px;
+}
+
 .edge-more__title {
+  display: block;
+  margin-bottom: 15px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
@@ -10,25 +18,72 @@
   color: @light-black;
 }
 
-.edge-more {
-  padding-top: 41px;
-  padding-left: 69px;
-  padding-right: 41px;
+.edge-more:nth-child(2) {
+  padding-top: 31px;
+}
+
+.edge-more:last-child {
+  padding-top: 30px;
 }
 
 @media (min-width: @tablet-width) {
   .edge-more {
     width: 256px;
-    padding-top: 164px;
-    padding-left: 51px;
-    padding-right: 50px;
+    padding-top: 155px;
+  }
+  .edge-more:nth-child(1) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  .edge-more:nth-child(2) {
+    padding-left: 45px;
+    padding-right: 44px;
+  }
+  .edge-more:last-child {
+    padding-left: 45px;
+    padding-right: 44px;
+  }
+  .edge-more:nth-child(2),
+  .edge-more:last-child {
+    padding-top: 155px;
+  }
+  .edge-more__title {
+    margin-bottom: 22px;
+    font-size: 21px;
+    line-height: 1.24;
   }
 }
 
 @media (min-width: @desktop-width) {
   .edge-more {
     width: 400px;
+    /*padding-left: 73px;
+    padding-right: 75px;*/
+  }
+  .edge-more__text {
+    margin: 0 auto;
+    margin-bottom: 21px;
+  }
+  .edge-more:first-child .edge-more__text {
+    width: 252px;
+  }
+  .edge-more:nth-child(2) .edge-more__text {
+    width: 197px;
+  }
+  .edge-more:last-child .edge-more__text {
+    width: 283px;
+  }
+
+  /*.edge-more:nth-child(1) {
     padding-left: 73px;
     padding-right: 75px;
   }
+  .edge-more:nth-child(2) {
+    padding-left: 45px;
+    padding-right: 44px;
+  }
+  .edge-more:last-child {
+    padding-left: 45px;
+    padding-right: 44px;
+  }*/
 }

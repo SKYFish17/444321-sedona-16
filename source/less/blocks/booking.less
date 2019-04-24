@@ -1,50 +1,66 @@
 .booking {
-  /*временно*/
-  min-height: 287px;
-  box-sizing: border-box;
-  outline: 2px solid orange;
-  /*временно*/
-  padding-top: 33px;
+  padding-top: 27px;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 49px;
 }
 
 .booking__title {
+  display: block;
+  margin-bottom: 20px;
   font-size: 21px;
   font-weight: bold;
   line-height: 1.24;
+  text-transform: uppercase;
   color: @black;
 }
 
 .booking__text {
   .indent-reset();
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   line-height: 1.71;
+  text-transform: uppercase;
   color: @light-black;
 }
 
 .booking__search {
+  display: block;
   padding-top: 17px;
-  padding-bottom: 19px;
+  padding-left: 46px;
+  padding-right: 47px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .booking {
-    min-height: 318px;
-    padding-top: 57px;
+    padding-top: 49px;
     padding-right: 155px;
     padding-left: 155px;
     padding-bottom: 58px;
+  }
+  .booking__title {
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 0.87;
+  }
+  .booking__text {
+    margin-bottom: 43px;
+  }
+  .booking__search {
+    padding-left: 135px;
+    padding-right: 136px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .booking {
-    min-height: 331px;
-    padding-top: 57px;
+    padding-top: 51px;
     padding-right: 371px;
     padding-left: 371px;
     padding-bottom: 66px;
+  }
+  .booking__text {
+    margin-bottom: 48px;
   }
 }

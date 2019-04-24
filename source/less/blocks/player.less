@@ -1,19 +1,32 @@
-@media (min-width: @tablet-width) {
-  .player {
-    padding-right: 60px;
-    padding-left: 60px;
-    /*временно*/
-    min-height: 499px;
-    /*временно*/
-  }
+.player__content {
+  position: relative;
+}
+
+.player__screensaver {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
   .player {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  /*временно*/
+  .player__screensaver {
+    width: 648px;
+    height: 500px;
+  }
+  /*временно*/
+}
+
+@media (min-width: @desktop-width) {
+  .player {
     padding-right: 201px;
     padding-left: 199px;
-    /*временно*/
-    min-height: 500px;
-    /*временно*/
   }
+  /*временно*/
+  .player__screensaver {
+    width: 800px;
+  }
+  /*временно*/
 }

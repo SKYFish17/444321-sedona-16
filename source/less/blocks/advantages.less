@@ -4,19 +4,22 @@
   line-height: 1.44;
   /*временно*/
   min-height: 2020px;
-  outline: 2px solid cyan;
   /*временно*/
 }
 
 .advantages__slogan {
-  margin-bottom: 0;
+  display: block;
+  margin-bottom: 29px;
+  line-height: 1.45;
   font-size: 18px;
   font-weight: bold;
   color: @black;
 }
 
 .advantages__intro {
-  margin-bottom: 29px;
+  .indent-reset();
+  margin-bottom: 4px;
+  line-height: 1.8;
   font-size: 14px;
   color: @light-black;
 }
@@ -33,10 +36,6 @@
 }
 
 .advantages__header {
-  /*временно*/
-  outline: 2px solid green;
-  min-height: 149px;
-  /*временно*/
   box-sizing: border-box;
   padding-top: 37px;
   padding-left: 32px;
@@ -47,20 +46,21 @@
 
 @media (min-width: @tablet-width) {
   .advantages__header {
-    padding-top: 51px;
+    padding-top: 47px;
     padding-left: 139px;
     padding-right: 139px;
-    padding-bottom: 40px;
-    min-height: 206px;
+    padding-bottom: 46px;
+  }
+  .advantages__slogan {
+    font-size: 21px;
+    line-height: 1.3;
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages__header {
-    padding-top: 51px;
     padding-left: 355px;
     padding-right: 355px;
-    padding-bottom: 40px;
   }
 }
 

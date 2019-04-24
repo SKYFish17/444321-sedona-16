@@ -1,5 +1,25 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  margin-left: 13px;
+}
 .copyright__text {
   text-transform: uppercase;
   line-height: 1.86;
   color: @black;
+}
+
+.copyright__link {
+  display: block;
+  margin-top: 3px;
+  margin-left: 12px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin-left: 8px;
+  }
+  .copyright__link {
+    margin-top: 0;
+  }
 }
