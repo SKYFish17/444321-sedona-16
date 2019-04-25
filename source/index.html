@@ -9,7 +9,7 @@
 <body>
   <div class="wrapper">
     <header class="page-header">
-      <nav class="main-menu main-menu--opened">
+      <nav class="main-menu main-menu--closed main-menu--nojs">
         <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-menu__wrapper">
           <ul class="main-menu__list site-list">
@@ -70,23 +70,23 @@
               <img class="edge__image" src="http://placehold.it/320x260" width="320" height="260" alt="Мотель в городке Седона">
             </figure>
           </li>
-            <div class="advantages__wrapper">
-              <li class="advantages__item edge edge--black">
-                <b class="edge__title">Небольшая площадь</b>
-                <span class="edge__count">&ndash; №3 &ndash;</span>
-                <p class="edge__desc">Все интересные места находятся очень близко</p>
-              </li>
-              <li class="advantages__item edge edge--black">
-                <b class="edge__title">Красивая дорога</b>
-                <span class="edge__count">&ndash; №4 &ndash;</span>
-                <p class="edge__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-              </li>
-              <li class="advantages__item edge edge--black">
-                <b class="edge__title">Мало туристов</b>
-                <span class="edge__count">&ndash; №5 &ndash;</span>
-                <p class="edge__desc">Большинство едет в Гранд Каньон и толпится там</p>
-              </li>
-            </div>
+          <div class="advantages__wrapper">
+            <li class="advantages__item edge edge--black">
+              <b class="edge__title">Небольшая площадь</b>
+              <span class="edge__count">&ndash; №3 &ndash;</span>
+              <p class="edge__desc">Все интересные места находятся очень близко</p>
+            </li>
+            <li class="advantages__item edge edge--black">
+              <b class="edge__title">Красивая дорога</b>
+              <span class="edge__count">&ndash; №4 &ndash;</span>
+              <p class="edge__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li class="advantages__item edge edge--black">
+              <b class="edge__title">Мало туристов</b>
+              <span class="edge__count">&ndash; №5 &ndash;</span>
+              <p class="edge__desc">Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </div>
           <li class="advantages__item advantages-more">
             <ul class="advantages-more__list">
               <li class="advantages-more__item edge-more">
@@ -147,5 +147,21 @@
       </div>
     </footer>
   </div>
+  <script>
+    var navMain = document.querySelector('.main-menu');
+    var navToggle = document.querySelector('.main-menu__toggle');
+
+    navMain.classList.remove('main-menu--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-menu--closed')) {
+        navMain.classList.remove('main-menu--closed');
+        navMain.classList.add('main-menu--opened');
+      } else {
+        navMain.classList.add('main-menu--closed');
+        navMain.classList.remove('main-menu--opened');
+      }
+    });
+  </script>
 </body>
 </html>

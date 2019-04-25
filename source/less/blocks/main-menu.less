@@ -10,10 +10,6 @@
     margin: 0 auto;
   }
 
-  .main-menu--opened {
-    min-height: 279px;
-  }
-
   .main-menu--closed .site-list {
     display: none;
   }
@@ -51,5 +47,21 @@
     width: 26px;
     height: 26px;
     background-color: #ffffff;
+  }
+
+  .main-menu--nojs {
+    min-height: 279px;
+  }
+
+  .main-menu--nojs .main-menu__toggle {
+    display: none;
+  }
+
+  .main-menu--nojs .site-list {
+    display: block;
+  }
+
+  .main-menu--opened {
+    min-height: 279px;
   }
 }
