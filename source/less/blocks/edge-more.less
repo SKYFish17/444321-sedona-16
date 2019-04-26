@@ -1,4 +1,5 @@
 .edge-more {
+  position: relative;
   padding-top: 35px;
   padding-left: 70px;
   padding-right: 41px;
@@ -24,6 +25,39 @@
 
 .edge-more:last-child {
   padding-top: 30px;
+}
+
+.edge-more:first-child::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 22px;
+  width: 37px;
+  height: 36px;
+  background-image: url("../../img/icon-house.svg");
+  background-size: contain;
+}
+
+.edge-more:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  width: 32px;
+  height: 38px;
+  background-image: url("../../img/icon-gift.svg");
+  background-size: contain;
+}
+
+.edge-more:last-child::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 19px;
+  width: 40px;
+  height: 35px;
+  background-image: url("../../img/icon-burger.svg");
+  background-size: contain;
 }
 
 @media (min-width: @tablet-width) {
