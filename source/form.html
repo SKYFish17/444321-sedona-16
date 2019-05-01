@@ -9,8 +9,8 @@
 <body>
   <div class="wrapper">
     <header class="page-header">
-      <nav class="main-menu">
-        <button class="main-menu__toggle" type="button">Открыть меню</button>
+      <nav class="main-menu main-menu--closed main-menu--nojs">
+        <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-menu__wrapper">
           <ul class="main-menu__list site-list">
             <li class="site-list__item">
@@ -29,7 +29,11 @@
         </div>
       </nav>
       <a  class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Городок Седона">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Городок Седона">
+        </picture>
       </a>
     </header>
 
@@ -71,5 +75,23 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    var navMain = document.querySelector('.main-menu');
+    var navToggle = document.querySelector('.main-menu__toggle');
+
+    navMain.classList.remove('main-menu--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-menu--closed')) {
+        navMain.classList.remove('main-menu--closed');
+        navMain.classList.add('main-menu--opened');
+      } else {
+        navMain.classList.add('main-menu--closed');
+        navMain.classList.remove('main-menu--opened');
+      }
+    });
+  </script>
+
 </body>
 </html>
