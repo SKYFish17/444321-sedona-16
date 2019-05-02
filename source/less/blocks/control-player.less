@@ -9,7 +9,7 @@
 .control-player__position {
   position: relative;
   padding-top: 23px;
-  padding-left: 22px;
+  padding-left: 25px;
   padding-right: 23px;
   padding-bottom: 23px;
   display: flex;
@@ -39,6 +39,8 @@
   width: 16px;
   height: 20px;
   border: none;
+  background-image: url("../../img/icon-video-replay.svg");
+  background-color: transparent;
 }
 
 .control-player__subtitles {
@@ -46,12 +48,16 @@
   width: 32px;
   height: 20px;
   border: none;
+  background-image: url("../../img/icon-video-subtitles.svg");
+  background-color: transparent;
 }
 
 .control-player__full-screen {
   width: 20px;
   height: 20px;
   border: none;
+  background-image: url("../../img/icon-video-fullscreen.svg");
+  background-color: transparent;
 }
 
 @media (min-width: @tablet-width) {
@@ -62,16 +68,19 @@
     background-color: @black;
     opacity: 0.6;
   }
+
   .control-player__position {
     padding-top: 35px;
     padding-left: 35px;
     padding-right: 41px;
     padding-bottom: 33px;
   }
+
   .control-player__playback {
     order: -1;
     margin-right: 42px;
   }
+
   .control-player__scrolling {
     position: static;
     order: 0;
@@ -88,10 +97,12 @@
   .control-player__playback {
     margin-right: 42px;
   }
+
   .control-player__scrolling {
     margin-right: 43px;
     width: 540px;
   }
+
   .control-player__subtitles {
     margin-right: 31px;
   }

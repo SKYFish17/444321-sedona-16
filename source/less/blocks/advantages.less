@@ -2,9 +2,6 @@
   box-sizing: border-box;
   text-transform: uppercase;
   line-height: 1.44;
-  /*временно*/
-  min-height: 2020px;
-  /*временно*/
 }
 
 .advantages__slogan {
@@ -36,12 +33,30 @@
 }
 
 .advantages__header {
+  position: relative;
   box-sizing: border-box;
   padding-top: 37px;
   padding-left: 32px;
   padding-right: 33px;
   padding-bottom: 22px;
   margin: 0 auto;
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: @mobile-width-only) {
+  .advantages__header::after {
+    position: absolute;
+    content: "";
+    bottom: -16px;
+    left: 0;
+    width: 320px;
+    height: 37px;
+    background-image: url("../../img/bg-triangle.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -51,9 +66,14 @@
     padding-right: 139px;
     padding-bottom: 46px;
   }
+
   .advantages__slogan {
     font-size: 21px;
     line-height: 1.3;
+  }
+
+  .advantages__wrapper {
+    flex-direction: row;
   }
 }
 
@@ -61,22 +81,5 @@
   .advantages__header {
     padding-left: 355px;
     padding-right: 355px;
-  }
-}
-
-.advantages__wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: @tablet-width) {
-  .advantages__wrapper {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .advantages {
-    min-height: 1304px;
   }
 }

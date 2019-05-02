@@ -1,6 +1,7 @@
 .social {
-  margin-bottom: 37px;
+  margin-bottom: 34px;
 }
+
 .social__list {
   .indent-reset();
   display: flex;
@@ -10,10 +11,24 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 46px;
   height: 48px;
   background-color: @blue;
+}
+
+.social__link:hover {
+  background-color: @deep-blue;
+}
+
+.social__link:active {
+  background-color: @dark-blue;
+
+  .social__icon {
+    opacity: 0.3;
+  }
 }
 
 .social__item:nth-child(2) .social__link {

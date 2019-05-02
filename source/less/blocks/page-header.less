@@ -1,8 +1,14 @@
 .page-header {
   position: relative;
-  min-height: 279px;
   display: flex;
   flex-direction: column;
+}
+
+.page-header__logo {
+  position: absolute;
+  z-index: 2;
+  bottom: -29px;
+  left: calc(50% - 51px);
 }
 
 @media (min-width: @tablet-width) {
@@ -11,7 +17,14 @@
   }
 }
 
-.page-header__logo {
-  position: absolute;
-  left: calc(50% - 51px);
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    bottom: -41px;
+    left: calc(50% - 93.5px);
+  }
+
+  .page-header__logo-image {
+    width: 187px;
+    height: 97px;
+  }
 }

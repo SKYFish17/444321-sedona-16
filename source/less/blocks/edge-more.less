@@ -1,4 +1,5 @@
 .edge-more {
+  position: relative;
   padding-top: 35px;
   padding-left: 70px;
   padding-right: 41px;
@@ -26,27 +27,89 @@
   padding-top: 30px;
 }
 
+.edge-more:first-child::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 22px;
+  width: 37px;
+  height: 36px;
+  background-image: url("../../img/icon-house.svg");
+  background-size: contain;
+}
+
+.edge-more:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  width: 32px;
+  height: 38px;
+  background-image: url("../../img/icon-gift.svg");
+  background-size: contain;
+}
+
+.edge-more:last-child::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 19px;
+  width: 40px;
+  height: 35px;
+  background-image: url("../../img/icon-burger.svg");
+  background-size: contain;
+}
+
 @media (min-width: @tablet-width) {
   .edge-more {
     width: 256px;
-    padding-top: 155px;
+    padding-top: 159px;
   }
-  .edge-more:nth-child(1) {
+
+  .edge-more:first-child {
     padding-left: 45px;
     padding-right: 45px;
   }
+
   .edge-more:nth-child(2) {
     padding-left: 45px;
     padding-right: 44px;
   }
+
   .edge-more:last-child {
     padding-left: 45px;
     padding-right: 44px;
   }
+
   .edge-more:nth-child(2),
   .edge-more:last-child {
-    padding-top: 155px;
+    padding-top: 159px;
   }
+
+  .edge-more:first-child::before {
+    top: 60px;
+    left: 90px;
+    width: 75px;
+    height: 72px;
+    background-size: contain;
+  }
+
+  .edge-more:nth-child(2)::before {
+    top: 57px;
+    left: 96px;
+    width: 64px;
+    height: 75px;
+    background-size: contain;
+  }
+
+  .edge-more:last-child::before {
+    top: 63px;
+    left: 89px;
+    width: 75px;
+    height: 68px;
+    background-size: contain;
+  }
+
   .edge-more__title {
     margin-bottom: 22px;
     font-size: 21px;
@@ -57,33 +120,36 @@
 @media (min-width: @desktop-width) {
   .edge-more {
     width: 400px;
-    /*padding-left: 73px;
-    padding-right: 75px;*/
   }
   .edge-more__text {
     margin: 0 auto;
     margin-bottom: 21px;
   }
+
+  .edge-more:first-child::before {
+    top: 60px;
+    left: 161px;
+  }
+
+  .edge-more:nth-child(2)::before {
+    top: 57px;
+    left: 167px;
+  }
+
+  .edge-more:last-child::before {
+    top: 63px;
+    left: 162px;
+  }
+
   .edge-more:first-child .edge-more__text {
     width: 252px;
   }
+
   .edge-more:nth-child(2) .edge-more__text {
     width: 197px;
   }
+
   .edge-more:last-child .edge-more__text {
     width: 283px;
   }
-
-  /*.edge-more:nth-child(1) {
-    padding-left: 73px;
-    padding-right: 75px;
-  }
-  .edge-more:nth-child(2) {
-    padding-left: 45px;
-    padding-right: 44px;
-  }
-  .edge-more:last-child {
-    padding-left: 45px;
-    padding-right: 44px;
-  }*/
 }

@@ -1,3 +1,83 @@
-.main-menu__toggle {
-  display: none;
+@media (max-width: @mobile-width-only) {
+  .main-menu {
+    position: relative;
+    min-height: 56px;
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .main-menu--closed .site-list {
+    display: none;
+  }
+
+  .main-menu__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 63px;
+    height: 56px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  .main-menu--closed .main-menu__toggle::before {
+    content: "";
+    line-height: 26px;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    width: 23px;
+    height: 4px;
+    background-color: @blue;
+    box-shadow: 0 8px @blue, 0 17px @blue;
+  }
+
+  .main-menu--opened .main-menu__toggle::before {
+    content: "";
+    line-height: 26px;
+    position: absolute;
+    top: 26px;
+    right: 17px;
+    width: 28px;
+    height: 4px;
+    transform: rotate(45deg);
+    background-color: @white;
+  }
+
+    .main-menu--opened .main-menu__toggle::after {
+    content: "";
+    line-height: 26px;
+    position: absolute;
+    top: 26px;
+    right: 17px;
+    width: 28px;
+    height: 4px;
+    transform: rotate(-45deg);
+    background-color: @white;
+  }
+
+  .main-menu--nojs {
+    min-height: 279px;
+  }
+
+  .main-menu--nojs .main-menu__toggle {
+    display: none;
+  }
+
+  .main-menu--nojs .site-list {
+    display: block;
+  }
+
+  .main-menu--opened {
+    min-height: 279px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-menu__toggle {
+    display: none;
+  }
 }
