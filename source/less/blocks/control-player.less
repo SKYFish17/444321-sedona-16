@@ -31,7 +31,28 @@
 }
 
 .control-player__range {
+  position: relative;
+  height: 24px;
   width: 100%;
+}
+
+.control-player__scale {
+  position: absolute;
+  width: 100%;
+  top: 8px;
+  height: 3px;
+  background-color: @white;
+  opacity: 0.2;
+}
+
+.control-player__toggle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 5px;
+  left: 35px;
+  background-color: @white;
+  border-radius: 50%;
 }
 
 .control-player__playback {
@@ -79,6 +100,15 @@
   .control-player__playback {
     order: -1;
     margin-right: 42px;
+    background-image: url("../../img/icon-video-replay--white.svg");
+  }
+
+  .control-player__subtitles {
+    background-image: url("../../img/icon-video-subtitles--white.svg");
+  }
+
+  .control-player__full-screen {
+    background-image: url("../../img/icon-video-fullscreen--white.svg");
   }
 
   .control-player__scrolling {
@@ -90,6 +120,11 @@
     margin-right: 43px;
     background-color: transparent;
     opacity: 1;
+  }
+
+  .control-player__toggle {
+    top: 6px;
+    left: 113px;
   }
 }
 
