@@ -57,9 +57,9 @@
             <li class="photo-gallery__item">
               <figure class="photo-galery__post">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg">
-                  <img class="photo-gallery__image" src="img/photo-sunset-mobile@1x.jpg" alt="Дорога на закате">
+                  <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                  <img class="photo-gallery__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Дорога на закате">
                 </picture>
                 <figcaption class="photo-galery__legend">
                   <div class="photo-gallery__text">
@@ -78,9 +78,9 @@
             <li class="photo-gallery__item">
               <figure class="photo-galery__post">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg">
-                  <img class="photo-gallery__image" src="img/photo-cactus-mobile@1x.jpg" alt="Кактус с жёлтыми цветами">
+                  <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="photo-gallery__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Кактус с жёлтыми цветами">
                 </picture>
                 <figcaption class="photo-galery__legend">
                   <div class="photo-gallery__text">
@@ -99,9 +99,9 @@
             <li class="photo-gallery__item">
               <figure class="photo-galery__post">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg">
-                  <img class="photo-gallery__image" src="img/photo-roads-mobile@1x.jpg" alt="Лесной серпантин">
+                  <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                  <img class="photo-gallery__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Лесной серпантин">
                 </picture>
                 <figcaption class="photo-galery__legend">
                   <div class="photo-gallery__text">
@@ -120,9 +120,9 @@
             <li class="photo-gallery__item">
               <figure class="photo-galery__post">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
-                  <img class="photo-gallery__image" src="img/photo-bridge-mobile@1x.jpg" alt="Дорога на закате">
+                  <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                  <img class="photo-gallery__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Дорога на закате">
                 </picture>
                 <figcaption class="photo-galery__legend">
                   <div class="photo-gallery__text">
@@ -148,9 +148,9 @@
           <div class="video-gallery__player player">
             <div class="player__content">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
-                <img class="player__screensaver" src="img/video-mobile@1x.jpg" width="321" height="202" alt="Видеопрезентация Седоны">
+                <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                <img class="player__screensaver" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="321" height="202" alt="Видеопрезентация Седоны">
               </picture>
               <div class="player__control control-player">
                 <div class="control-player__position">
@@ -221,8 +221,8 @@
       <div class="page-footer__copyright copyright">
         <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 60" width="40" height="40">
-            <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+          <svg class="copyright__logo" width="40" height="40">
+            <use xlink:href="img/sprite.svg#icon-logo"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>
         </a>
