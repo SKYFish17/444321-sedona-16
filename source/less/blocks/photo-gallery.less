@@ -62,25 +62,17 @@
 
 .photo-gallery__author {
   text-transform: none;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .photo-gallery__like {
-  position: relative;
-  padding-left: 38px;
+  display: flex;
+  align-items: flex-end;
   font-weight: bold;
 }
 
-.photo-gallery__like::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: 0;
-  width: 23px;
-  height: 21px;
-  background-image: url("../../img/icon-like.svg");
-  background-repeat: no-repeat;
-  opacity: 0.3;
+.photo-gallery__counter {
+  padding-left: 15px;
 }
 
 @media (min-width: @tablet-width) {
@@ -140,9 +132,12 @@
     margin-bottom: 0;
   }
 
-  .photo-gallery__like::before {
-    top: -4px;
-    left: 6px;
+  .photo-gallery__like {
+    padding-bottom: 4px;
+  }
+
+  .photo-gallery__counter {
+    padding-left: 10px;
   }
 }
 
@@ -169,7 +164,7 @@
     background-color: transparent;
   }
 
-  .photo-gallery__like::before {
-    opacity: 1;
+  .photo-gallery__icon {
+    fill: @white;
   }
 }
