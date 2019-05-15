@@ -1,0 +1,54 @@
+.form-fio {
+  .indent-reset();
+  padding-bottom: 25px;
+}
+
+.form-fio__title {
+  .indent-reset();
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-fio__string {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-fio__string:last-child {
+  margin-bottom: 0;
+}
+
+.form-fio__string .form-fio__label {
+  margin-right: 16px;
+}
+
+.form-fio__label {
+  line-height: 1.86;
+  text-transform: uppercase;
+  color: @light-black;
+}
+.form-fio__input {
+  .indent-reset();
+  box-sizing: border-box;
+  padding-top: 22px;
+  padding-right: 22px;
+  padding-bottom: 19px;
+  padding-left: 22px;
+  width: 100%;
+  height: 58px;
+  font-size: 18px;
+  font-weight: bold;
+  color: @black;
+  background-color: @gray;
+  border: none;
+}
+
+.form-fio__input::placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  color: @black;
+}
