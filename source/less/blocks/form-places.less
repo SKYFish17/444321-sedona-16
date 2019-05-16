@@ -33,3 +33,30 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+@media (min-width: @tablet-width) {
+  .form-places__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .form-places__string:nth-child(1) {
+    margin-right: 66px;
+  }
+
+  .form-places__string:nth-child(3) {
+    margin-right: 82px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-places__wrapper {
+    padding-right: 0px;
+    padding-left: 0px;
+    justify-content: space-between;
+  }
+}

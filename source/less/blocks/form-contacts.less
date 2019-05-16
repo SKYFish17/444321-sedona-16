@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 
-.form-contacts .form-contacts__string:nth-child(2) {
+.form-contacts__string:nth-child(2) {
   margin-bottom: 20px;
 }
 
@@ -49,4 +49,35 @@
   font-size: 18px;
   font-weight: bold;
   color: @black;
+}
+
+@media (min-width: @desktop-width) {
+  .form-contacts__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-contacts__string {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .form-contacts__string:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .form-contacts__label {
+    .indent-reset();
+  }
+
+  .form-contacts__unusual {
+    display: none;
+  }
+
+  .form-contacts__input {
+    width: 315px;
+  }
+
 }

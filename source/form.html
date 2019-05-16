@@ -72,15 +72,20 @@
               </fieldset>
             </li>
             <li class="form__item">
-              <fieldset class="form__fio form-contacts">
+              <fieldset class="form__contacts form-contacts">
                 <legend class="form-contacts__title">Контактная информация:</legend>
-                <div class="form-contacts__string">
-                  <label class="form-contacts__label" for="contacts__tel-id">Контактный телефон:</label>
-                  <input class="form-contacts__input" id="contacts__tel-id" name="phone" type="tel" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон">
-                </div>
-                <div class="form-contacts__string">
-                  <label class="form-contacts__label" for="contacts__mail-id">Электронная почта*:</label>
-                  <input class="form-contacts__input" id="contacts__mail-id" name="email" type="email" placeholder="Введите e-mail">
+                <div class="form-contacts__wrapper">
+                  <div class="form-contacts__string">
+                    <label class="form-contacts__label" for="contacts__tel-id">
+                      <span class="form-contacts__unusual">Контактный</span>
+                      <span class="form-contacts__usual">телефон:</span>
+                    </label>
+                    <input class="form-contacts__input" id="contacts__tel-id" name="phone" type="tel" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон">
+                  </div>
+                  <div class="form-contacts__string">
+                    <label class="form-contacts__label" for="contacts__mail-id">Электронная почта*:</label>
+                    <input class="form-contacts__input" id="contacts__mail-id" name="email" type="email" placeholder="Введите e-mail">
+                  </div>
                 </div>
               </fieldset>
             </li>
@@ -104,21 +109,23 @@
             <li class="form__item">
               <fieldset class="form__places form-places">
                 <legend class="form-places__title">Посещенные достопримечательности:</legend>
-                <div class="form-places__string">
-                  <input class="form-places__input" id="places__bridge-id" name="place" value="devils bridge" type="checkbox" checked>
-                  <label class="form-places__label" for="places__bridge-id">Мост дьявола</label>
-                </div>
-                <div class="form-places__string">
-                  <input class="form-places__input" id="places__mountain-id" name="place" value="Bound-mountain" type="checkbox" checked>
-                  <label class="form-places__label" for="places__mountain-id">Гора-Колокол</label>
-                </div>
-                <div class="form-places__string">
-                  <input class="form-places__input" id="places__park-id" name="place" value="Slide-park" type="checkbox" checked>
-                  <label class="form-places__label" for="places__park-id">Слайд-парк</label>
-                </div>
-                <div class="form-places__string">
-                  <input class="form-places__input" id="places__rock-id" name="place" value="Red rocks" type="checkbox">
-                  <label class="form-places__label" for="places__rock-id">Красные скалы</label>
+                <div class="form-places__wrapper">
+                  <div class="form-places__string">
+                    <input class="form-places__input" id="places__bridge-id" name="place" value="devils bridge" type="checkbox" checked>
+                    <label class="form-places__label" for="places__bridge-id">Мост дьявола</label>
+                  </div>
+                  <div class="form-places__string">
+                    <input class="form-places__input" id="places__mountain-id" name="place" value="Bound-mountain" type="checkbox" checked>
+                    <label class="form-places__label" for="places__mountain-id">Гора-Колокол</label>
+                  </div>
+                  <div class="form-places__string">
+                    <input class="form-places__input" id="places__park-id" name="place" value="Slide-park" type="checkbox" checked>
+                    <label class="form-places__label" for="places__park-id">Слайд-парк</label>
+                  </div>
+                  <div class="form-places__string">
+                    <input class="form-places__input" id="places__rock-id" name="place" value="Red rocks" type="checkbox">
+                    <label class="form-places__label" for="places__rock-id">Красные скалы</label>
+                  </div>
                 </div>
               </fieldset>
             </li>
@@ -129,7 +136,10 @@
               </fieldset>
             </li>
           </ul>
-          <button class="button button__form" type="submit">Отправить отзыв</button>
+          <div class="form__send">
+            <button class="form__button button" type="submit">Отправить отзыв</button>
+            <span class="form__remark">* — обязательные поля</span>
+          </div>
         </form>
       </section>
     </main>
