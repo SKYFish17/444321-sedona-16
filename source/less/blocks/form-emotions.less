@@ -1,11 +1,11 @@
 .form-emotions {
   .indent-reset();
-  padding-bottom: 51px;
+  margin-bottom: 23px;
 }
 
 .form-emotions__title {
   .indent-reset();
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -13,12 +13,13 @@
 
 .form__emotions__input {
   box-sizing: border-box;
-  padding-top: 22px;
+  padding-top: 16px;
   padding-right: 21px;
-  padding-bottom: 22px;
+  padding-bottom: 16px;
   padding-left: 21px;
   width: 100%;
   height: 160px;
+  line-height: 1.44;
   border: none;
   background-color: @gray;
 }
@@ -30,7 +31,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__item {
-    width: 100%;
+  .form-emotions {
+    margin-bottom: 0;
+  }
+  .form-emotions__title {
+    margin-bottom: 58px;
+    font-size: 21px;
   }
 }

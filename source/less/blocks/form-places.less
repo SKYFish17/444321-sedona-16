@@ -1,18 +1,19 @@
 .form-places {
   .indent-reset();
-  padding-bottom: 30px;
+  margin-bottom: 2px;
 }
 
 .form-places__title {
   .indent-reset();
-  margin-bottom: 26px;
+  margin-bottom: 17px;
   font-size: 18px;
   font-weight: bold;
+  line-height: 1.44;
   text-transform: uppercase;
 }
 
 .form-places__string {
-  margin-bottom: 34px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -24,9 +25,9 @@
 }
 
 .form-places__input {
-  margin-right: 29px;
-  width: 46px;
-  height: 46px;
+  margin-right: 24px;
+  width: 55px;
+  height: 55px;
 }
 
 .form-places__label {
@@ -35,28 +36,58 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form-places {
+    margin-bottom: 0;
+  }
+
+  .form-places__title {
+    margin-bottom: 44px;
+    padding-right: 184px;
+    padding-left: 184px;
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
   .form-places__wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 80px;
+    padding-left: 96px;
+  }
+
+  .form-places__string {
+    margin-bottom: 30px;
   }
 
   .form-places__string:nth-child(1) {
-    margin-right: 66px;
+    margin-right: 71px;
   }
 
   .form-places__string:nth-child(3) {
-    margin-right: 82px;
+    margin-right: 90px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form-places__title {
+    padding-right: 275px;
+    padding-left: 275px;
+  }
+
   .form-places__wrapper {
     padding-right: 0px;
     padding-left: 0px;
     justify-content: space-between;
+  }
+
+  .form-places__string {
+    margin-bottom: 0;
+  }
+
+  .form-places__string:nth-child(1),
+  .form-places__string:nth-child(3)  {
+    margin-right: 0;
   }
 }
