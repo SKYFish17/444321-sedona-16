@@ -40,8 +40,19 @@
 
 .form__item {
   .indent-reset();
+  position: relative;
   padding-top: 21px;
   padding-bottom: 25px;
+}
+
+.form__item::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -20px;
+  width: 320px;
+  height: 1px;
+  background-color: @gray;
 }
 
 .form__item fieldset {
@@ -96,6 +107,54 @@
   .form__item {
     .indent-reset();
     width: 100%;
+  }
+
+  .form__item::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 1px;
+    width: 124px;
+    height: 1px;
+    background-color: @gray;
+  }
+
+  .form__item::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: 0px;
+    width: 124px;
+    height: 1px;
+    background-color: @gray;
+  }
+
+  .form__item:first-child::before {
+    top: 6px;
+    left: 0px;
+    width: 1px;
+    height: 292px;
+  }
+
+  .form__item:first-child::after,
+  .form__item:nth-child(3)::after,
+  .form__item:nth-child(3)::before {
+    display: none;
+  }
+
+  .form__item:nth-child(2)::before,
+  .form__item:nth-child(2)::after {
+    top: 11px;
+  }
+
+  .form__item:nth-child(4)::before,
+  .form__item:nth-child(4)::after {
+    top: 26px;
+  }
+
+  .form__item:nth-child(5)::before,
+  .form__item:nth-child(5)::after {
+    top: 11px;
   }
 
   .form__item:first-child {
@@ -182,6 +241,20 @@
   .form__item:nth-child(4) {
     margin-bottom: 66px;
   }
+
+  .form__item:first-child::before {
+    left: 2px;
+  }
+
+  .form__item:nth-child(2)::before,
+  .form__item:nth-child(2)::after,
+  .form__item:nth-child(4)::before,
+  .form__item:nth-child(4)::after,
+  .form__item:nth-child(5)::before,
+  .form__item:nth-child(5)::after {
+    width: 280px;
+  }
+
 
   .form__button {
     padding-right: 0;

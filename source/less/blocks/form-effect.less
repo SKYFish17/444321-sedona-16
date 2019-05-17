@@ -12,11 +12,14 @@
 }
 
 .form-effect__string {
-  margin-bottom: 14px;
+  position: relative;
+  margin-bottom: 13px;
+  padding-left: 55px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  height: 55px;
 }
 
 .form-effect__string:last-child {
@@ -25,14 +28,38 @@
 
 .form-effect__input {
   margin-right: 22px;
-  width: 57px;
+  width: 55px;
   height: 55px;
 }
 
 .form-effect__label {
+  margin-left: 23px;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.1px;
+}
+
+.form-effect__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55px;
+  height: 55px;
+  background-color: @gray;
+  border-radius: 50%;
+}
+
+.form-effect__input:checked + .form-effect__label::after {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  top: 17px;
+  left: 17px;
+  width: 21px;
+  height: 21px;
+  background-color: @black;
+  border-radius: 50%;
 }
 
 @media (min-width: @tablet-width) {
