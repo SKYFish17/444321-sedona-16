@@ -26,12 +26,6 @@
   margin-bottom: 0;
 }
 
-.form-effect__input {
-  margin-right: 22px;
-  width: 55px;
-  height: 55px;
-}
-
 .form-effect__label {
   margin-left: 23px;
   font-size: 18px;
@@ -50,6 +44,14 @@
   border-radius: 50%;
 }
 
+.form-effect__label:hover::before {
+  background-color: @deep-gray;
+}
+
+.form-effect__label:active::before {
+  background-color: @dark-gray;
+}
+
 .form-effect__input:checked + .form-effect__label::after {
   content: "";
   position: absolute;
@@ -58,8 +60,12 @@
   left: 17px;
   width: 21px;
   height: 21px;
-  background-color: @black;
+  background-color: @light-black;
   border-radius: 50%;
+}
+
+.form-effect__input:checked + .form-effect__label:active::after {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
