@@ -48,36 +48,44 @@
   border: none;
 }
 
-.form-contacts__string::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  bottom: 0;
-  width: 58px;
-  height: 58px;
-  background-color: @deep-gray;
+.form-contacts__string {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    width: 58px;
+    height: 58px;
+    background-color: @deep-gray;
+  }
 }
 
-.form-contacts__string::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  right: 20px;
-  bottom: 20px;
-  width: 18px;
-  height: 18px;
-  background-image: url("../../img/icon-phone.svg");
+.form-contacts__string {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    bottom: 20px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../img/icon-phone.svg");
+  }
 }
 
-.form-contacts__string:nth-child(2)::after {
-  background-image: url("../../img/icon-mail.svg");
+.form-contacts__string:nth-child(2) {
+  &::after {
+    background-image: url("../../img/icon-mail.svg");
+  }
 }
 
-.form-contacts__input::placeholder {
-  font-size: 18px;
-  font-weight: bold;
-  color: @black;
+.form-contacts__input {
+  &::placeholder {
+    font-size: 18px;
+    font-weight: bold;
+    color: @black;
+  }
 }
 
 @media (min-width: @tablet-width) {

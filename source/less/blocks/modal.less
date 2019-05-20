@@ -40,15 +40,17 @@
   padding-bottom: 20px;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 
-  &--success::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    width: 320px;
-    height: 98px;
-    background-color: @gray;
+  &--success {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 320px;
+      height: 98px;
+      background-color: @gray;
+    }
   }
 
   &--error {
@@ -95,7 +97,7 @@
         width: 100%;
       }
 
-      .modal__intro br {
+      br {
         display: none;
       }
     }

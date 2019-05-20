@@ -33,39 +33,49 @@
   letter-spacing: 0.1px;
 }
 
-.form-effect__label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 55px;
-  height: 55px;
-  background-color: @gray;
-  border-radius: 50%;
+.form-effect__label {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    background-color: @gray;
+    border-radius: 50%;
+  }
 }
 
-.form-effect__label:hover::before {
-  background-color: @deep-gray;
+.form-effect__label:hover {
+  &::before {
+    background-color: @deep-gray;
+  }
 }
 
-.form-effect__label:active::before {
-  background-color: @dark-gray;
+.form-effect__label:active {
+  &::before {
+    background-color: @dark-gray;
+  }
 }
 
-.form-effect__input:checked + .form-effect__label::after {
-  content: "";
-  position: absolute;
-  z-index: 999;
-  top: 17px;
-  left: 17px;
-  width: 21px;
-  height: 21px;
-  background-color: @light-black;
-  border-radius: 50%;
+.form-effect__input:checked + .form-effect__label {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 17px;
+    left: 17px;
+    width: 21px;
+    height: 21px;
+    background-color: @light-black;
+    border-radius: 50%;
+  }
 }
 
-.form-effect__input:checked + .form-effect__label:active::after {
-  opacity: 0.3;
+.form-effect__input:checked + .form-effect__label:active {
+  &::after {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -86,16 +96,28 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form-effect__title {
+  .form-effect__legend {
     text-align: right;
   }
 
   .form-effect__string {
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 
   .form-effect__input {
     margin-right: 18px;
     margin-left: 4px;
+  }
+
+  .form-effect__label {
+    &::before {
+      left: 3px;
+    }
+  }
+
+  .form-effect__input:checked + .form-effect__label {
+    &::after {
+      left: 21px;
+    }
   }
 }
