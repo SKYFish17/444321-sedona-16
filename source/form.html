@@ -56,7 +56,7 @@
           <ul class="form__list">
             <li class="form__item">
               <fieldset class="form-item__fio form-fio">
-                <legend class="form-fio__title">Представьтесь:</legend>
+                <legend class="form-fio__legend"><h3 class="form-fio__title">Представьтесь:</h3></legend>
                 <div class="form-fio__string">
                   <label class="form-fio__label" for="fio__name-id">Имя*:</label>
                   <input class="form-fio__input" id="fio__name-id" name="name" type="text" placeholder="Петр" required>
@@ -73,7 +73,7 @@
             </li>
             <li class="form__item">
               <fieldset class="form__contacts form-contacts">
-                <legend class="form-contacts__title">Контактная информация:</legend>
+                <legend class="form-contacts__legend"><h3 class="form-contacts__title">Контактная информация:</h3></legend>
                 <div class="form-contacts__wrapper">
                   <div class="form-contacts__string">
                     <label class="form-contacts__label" for="contacts__tel-id">
@@ -91,7 +91,7 @@
             </li>
             <li class="form__item">
               <fieldset class="form__effect form-effect">
-                <legend class="form-effect__title">Ваше общее впечатление:</legend>
+                <legend class="form-effect__legend"><h3 class="form-effect__title">Ваше общее впечатление:</h3></legend>
                 <div class="form-effect__string">
                   <input class="form-effect__input visually-hidden" id="effect__positive-id" name="effect" value="positive" type="radio" checked>
                   <label class="form-effect__label" for="effect__positive-id">Скорее положительное</label>
@@ -108,7 +108,7 @@
             </li>
             <li class="form__item">
               <fieldset class="form__places form-places">
-                <legend class="form-places__title">Посещенные достопримечательности:</legend>
+                <legend class="form-places__legend"><h3 class="form-places__title">Посещенные достопримечательности:</h3></legend>
                 <div class="form-places__wrapper">
                   <div class="form-places__string">
                     <input class="form-places__input visually-hidden" id="places__bridge-id" name="place" value="devils bridge" type="checkbox" checked>
@@ -131,7 +131,7 @@
             </li>
             <li class="form__item">
               <fieldset class="form__emotions form-emotions">
-                <legend class="form-emotions__title">Опишите свои эмоции:</legend>
+                <legend class="form-emotions__legend"><h3 class="form-emotions__title">Опишите свои эмоции:</h3></legend>
                 <textarea class="form__emotions__input" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
               </fieldset>
             </li>
@@ -186,6 +186,18 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal modal--success">
+      <h3 class="modal__title">Ваш отзыв отправлен!</h3>
+      <p class="modal__intro">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
+        В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="modal__button button">Закрыть окно</button>
+    </div>
+    <div class="modal modal--error">
+      <h3 class="modal__title">Что-то пошло не так!</h3>
+      <p class="modal__intro">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="modal__button button">Ок</button>
+    </div>
   </div>
   <script src="js/menu-script.js"></script>
   <script src="js/picturefill.min.js"></script>
