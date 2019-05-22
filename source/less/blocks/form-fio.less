@@ -54,6 +54,12 @@
   color: @black;
   background-color: @gray;
   border: none;
+
+  &::placeholder {
+    font-size: 18px;
+    font-weight: bold;
+    color: @black;
+  }
 }
 
 .form-fio__input:hover {
@@ -63,14 +69,6 @@
 .form-fio__input:active {
   border: 4px solid @deep-gray;
   background-color: transparent;
-}
-
-.form-fio__input {
-  &::placeholder {
-    font-size: 18px;
-    font-weight: bold;
-    color: @black;
-  }
 }
 
 @media (min-width: @tablet-width) {
