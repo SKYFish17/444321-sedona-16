@@ -56,14 +56,14 @@
           <ul class="form__list">
             <li class="form__item">
               <fieldset class="form-item__fio form-fio">
-                <legend class="form-fio__title">Представьтесь:</legend>
+                <legend class="form-fio__legend"><h3 class="form-fio__title">Представьтесь:</h3></legend>
                 <div class="form-fio__string">
                   <label class="form-fio__label" for="fio__name-id">Имя*:</label>
-                  <input class="form-fio__input" id="fio__name-id" name="name" type="text" placeholder="Петр">
+                  <input class="form-fio__input" id="fio__name-id" name="name" type="text" placeholder="Петр" required>
                 </div>
                 <div class="form-fio__string">
                   <label class="form-fio__label" for="fio__surname-id">Фамилия*:</label>
-                  <input class="form-fio__input" id="fio__surname-id" name="surname" type="text" placeholder="Иванов">
+                  <input class="form-fio__input" id="fio__surname-id" name="surname" type="text" placeholder="Иванов" required>
                 </div>
                 <div class="form-fio__string">
                   <label class="form-fio__label" for="fio__patronymic-id">Отчество:</label>
@@ -73,57 +73,57 @@
             </li>
             <li class="form__item">
               <fieldset class="form__contacts form-contacts">
-                <legend class="form-contacts__title">Контактная информация:</legend>
+                <legend class="form-contacts__legend"><h3 class="form-contacts__title">Контактная информация:</h3></legend>
                 <div class="form-contacts__wrapper">
                   <div class="form-contacts__string">
                     <label class="form-contacts__label" for="contacts__tel-id">
                       <span class="form-contacts__unusual">Контактный</span>
                       <span class="form-contacts__usual">телефон*:</span>
                     </label>
-                    <input class="form-contacts__input" id="contacts__tel-id" name="phone" type="tel" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон">
+                    <input class="form-contacts__input" id="contacts__tel-id" name="phone" type="tel" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон" required>
                   </div>
                   <div class="form-contacts__string">
                     <label class="form-contacts__label" for="contacts__mail-id">Электронная почта*:</label>
-                    <input class="form-contacts__input" id="contacts__mail-id" name="email" type="email" placeholder="Введите e-mail">
+                    <input class="form-contacts__input" id="contacts__mail-id" name="email" type="email" placeholder="Введите e-mail" required>
                   </div>
                 </div>
               </fieldset>
             </li>
             <li class="form__item">
               <fieldset class="form__effect form-effect">
-                <legend class="form-effect__title">Ваше общее впечатление:</legend>
+                <legend class="form-effect__legend"><h3 class="form-effect__title">Ваше общее впечатление:</h3></legend>
                 <div class="form-effect__string">
-                  <input class="form-effect__input" id="effect__positive-id" name="effect" value="positive" type="radio" checked>
+                  <input class="form-effect__input visually-hidden" id="effect__positive-id" name="effect" value="positive" type="radio"  tabindex="1" checked>
                   <label class="form-effect__label" for="effect__positive-id">Скорее положительное</label>
                 </div>
                 <div class="form-effect__string">
-                  <input class="form-effect__input" id="effect__negative-id" name="effect" value="negative" type="radio">
+                  <input class="form-effect__input visually-hidden" id="effect__negative-id" name="effect" value="negative" type="radio" tabindex="2" >
                   <label class="form-effect__label" for="effect__negative-id">Скорее отрицательное</label>
                 </div>
                 <div class="form-effect__string">
-                  <input class="form-effect__input" id="effect__difficult-id" name="effect" value="difficult" type="radio">
+                  <input class="form-effect__input visually-hidden" id="effect__difficult-id" name="effect" value="difficult" type="radio" tabindex="3" >
                   <label class="form-effect__label" for="effect__difficult-id">Затрудняюсь ответить</label>
                 </div>
               </fieldset>
             </li>
             <li class="form__item">
               <fieldset class="form__places form-places">
-                <legend class="form-places__title">Посещенные достопримечательности:</legend>
+                <legend class="form-places__legend"><h3 class="form-places__title">Посещенные достопримечательности:</h3></legend>
                 <div class="form-places__wrapper">
                   <div class="form-places__string">
-                    <input class="form-places__input" id="places__bridge-id" name="place" value="devils bridge" type="checkbox" checked>
+                    <input class="form-places__input visually-hidden" id="places__bridge-id" name="place" value="devils bridge" type="checkbox" checked>
                     <label class="form-places__label" for="places__bridge-id">Мост Дьявола</label>
                   </div>
                   <div class="form-places__string">
-                    <input class="form-places__input" id="places__mountain-id" name="place" value="Bound-mountain" type="checkbox" checked>
+                    <input class="form-places__input visually-hidden" id="places__mountain-id" name="place" value="Bound-mountain" type="checkbox" checked>
                     <label class="form-places__label" for="places__mountain-id">Гора-Колокол</label>
                   </div>
                   <div class="form-places__string">
-                    <input class="form-places__input" id="places__park-id" name="place" value="Slide-park" type="checkbox" checked>
+                    <input class="form-places__input visually-hidden" id="places__park-id" name="place" value="Slide-park" type="checkbox" checked>
                     <label class="form-places__label" for="places__park-id">Слайд-парк</label>
                   </div>
                   <div class="form-places__string">
-                    <input class="form-places__input" id="places__rock-id" name="place" value="Red rocks" type="checkbox">
+                    <input class="form-places__input visually-hidden" id="places__rock-id" name="place" value="Red rocks" type="checkbox">
                     <label class="form-places__label" for="places__rock-id">Красные скалы</label>
                   </div>
                 </div>
@@ -131,7 +131,7 @@
             </li>
             <li class="form__item">
               <fieldset class="form__emotions form-emotions">
-                <legend class="form-emotions__title">Опишите свои эмоции:</legend>
+                <legend class="form-emotions__legend"><h3 class="form-emotions__title">Опишите свои эмоции:</h3></legend>
                 <textarea class="form__emotions__input" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
               </fieldset>
             </li>
@@ -186,6 +186,18 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal modal--success">
+      <h3 class="modal__title">Ваш отзыв отправлен!</h3>
+      <p class="modal__intro">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
+        В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="modal__button button">Закрыть окно</button>
+    </div>
+    <div class="modal modal--error">
+      <h3 class="modal__title">Что-то пошло не так!</h3>
+      <p class="modal__intro">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="modal__button button">Ок</button>
+    </div>
   </div>
   <script src="js/menu-script.js"></script>
   <script src="js/picturefill.min.js"></script>

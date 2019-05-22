@@ -6,6 +6,7 @@
       padding-top: 52px;
       height: 158px;
       background-position: left bottom;
+      background-color: @intro-cap;
     }
 
     .intro__image {
@@ -22,25 +23,25 @@
   padding-top: 90px;
   width: 320px;
   height: 389px;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
-  background-color: @gray;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-color: @intro-cap;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 26px;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+  }
 }
 
 @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
   .intro__photo {
-    background-image: url("../../img/bg-back-mobile@2x.jpg");
+    background-image: url("../img/bg-back-mobile@2x.jpg");
     background-size: cover;
   }
-}
-
-.intro__photo::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 320px;
-  height: 26px;
-  background-image: url("../../img/bg-intro-triangle-mobile.svg");
 }
 
 .intro__image {
@@ -71,10 +72,16 @@
     padding-top: 77px;
     width: 768px;
     height: 518px;
-    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    &::after {
+      width: 768px;
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/bg-back-tablet@2x.jpg");
       background-size: 768px auto;
     }
   }
@@ -82,12 +89,6 @@
   .intro__image {
     width: 460px;
     height: 350px;
-  }
-
-  .intro__photo::after {
-    width: 768px;
-    height: 57px;
-    background-image: url("../../img/bg-intro-triangle-tablet.svg");
   }
 }
 
@@ -109,17 +110,17 @@
   .intro__photo {
     padding-top: 78px;
     width: 1200px;
-    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    &::after {
+      width: 1200px;
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/bg-back-desktop@2x.jpg");
+      background-image: url("../img/bg-back-desktop@2x.jpg");
       background-size: 1200px auto;
     }
-  }
-
-  .intro__photo::after {
-    width: 1200px;
-    height: 57px;
-    background-image: url("../../img/bg-intro-triangle-desktop.svg");
   }
 }

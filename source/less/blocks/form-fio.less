@@ -39,6 +39,7 @@
   text-transform: uppercase;
   color: @light-black;
 }
+
 .form-fio__input {
   .indent-reset();
   box-sizing: border-box;
@@ -53,18 +54,30 @@
   color: @black;
   background-color: @gray;
   border: none;
+
+  &::placeholder {
+    font-size: 18px;
+    font-weight: bold;
+    color: @black;
+  }
 }
 
-.form-fio__input::placeholder {
-  font-size: 18px;
-  font-weight: bold;
-  color: @black;
+.form-fio__input:hover {
+  background-color: @deep-gray;
+}
+
+.form-fio__input:active {
+  border: 4px solid @deep-gray;
+  background-color: transparent;
 }
 
 @media (min-width: @tablet-width) {
+  .form-fio__legend {
+    text-align: left;
+  }
+
   .form-fio__title {
     margin-bottom: 60px;
     font-size: 21px;
-    text-align: left;
   }
 }

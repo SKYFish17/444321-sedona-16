@@ -40,8 +40,25 @@
 
 .form__item {
   .indent-reset();
+  position: relative;
   padding-top: 21px;
   padding-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: @gray;
+  }
+}
+
+.form__item:nth-child(4) {
+  &::before {
+    top: 2px;
+  }
 }
 
 .form__item fieldset {
@@ -96,6 +113,26 @@
   .form__item {
     .indent-reset();
     width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 1px;
+      width: 124px;
+      height: 1px;
+      background-color: @gray;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: 0;
+      width: 124px;
+      height: 1px;
+      background-color: @gray;
+    }
   }
 
   .form__item:first-child {
@@ -103,11 +140,17 @@
     width: 324px;
     padding-left: 58px;
     margin-bottom: 70px;
-  }
 
-  .form__item:nth-child(2) {
-    margin-bottom: 48px;
-    width: 100%;
+    &::before {
+      top: 6px;
+      left: 0;
+      width: 1px;
+      height: 292px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .form__item:nth-child(3) {
@@ -115,11 +158,50 @@
     padding-right: 48px;
     width: 323px;
     order: -1;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__item:nth-child(2) {
+    margin-bottom: 48px;
+    width: 100%;
+
+    &::before {
+      top: 11px;
+    }
+
+    &::after {
+      top: 11px;
+    }
   }
 
   .form__item:nth-child(4) {
-    margin-bottom: 42px;
+    margin-bottom: 38px;
     width: 100%;
+
+    &::before {
+      top: 26px;
+    }
+
+    &::after {
+      top: 26px;
+    }
+  }
+
+  .form__item:nth-child(5) {
+    &::before {
+      top: 11px;
+    }
+
+    &::after {
+      top: 11px;
+    }
   }
 
   .form__item:last-child {
@@ -166,10 +248,22 @@
     width: 479px;
     padding-left: 82px;
     margin-bottom: 68px;
+
+    &::before {
+      left: 2px;
+    }
   }
 
   .form__item:nth-child(2) {
     margin-bottom: 53px;
+
+    &::before {
+      width: 280px;
+    }
+
+    &::after {
+      width: 280px;
+    }
   }
 
   .form__item:nth-child(3) {
@@ -180,7 +274,25 @@
   }
 
   .form__item:nth-child(4) {
-    margin-bottom: 66px;
+    margin-bottom: 68px;
+
+    &::before {
+      width: 280px;
+    }
+
+    &::after {
+      width: 280px;
+    }
+  }
+
+  .form__item:nth-child(5) {
+    &::before {
+      width: 280px;
+    }
+
+    &::after {
+      width: 280px;
+    }
   }
 
   .form__button {

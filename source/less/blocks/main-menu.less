@@ -23,40 +23,44 @@
     background-color: transparent;
   }
 
-  .main-menu--closed .main-menu__toggle::before {
-    content: "";
-    line-height: 26px;
-    position: absolute;
-    top: 17px;
-    right: 20px;
-    width: 23px;
-    height: 4px;
-    background-color: @blue;
-    box-shadow: 0 8px @blue, 0 17px @blue;
+  .main-menu--closed .main-menu__toggle {
+    &::before {
+      content: "";
+      line-height: 26px;
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      width: 23px;
+      height: 4px;
+      background-color: @blue;
+      box-shadow: 0 8px @blue, 0 17px @blue;
+    }
   }
 
-  .main-menu--opened .main-menu__toggle::before {
-    content: "";
-    line-height: 26px;
-    position: absolute;
-    top: 26px;
-    right: 17px;
-    width: 28px;
-    height: 4px;
-    transform: rotate(45deg);
-    background-color: @white;
-  }
+  .main-menu--opened .main-menu__toggle {
+    &::before {
+      content: "";
+      line-height: 26px;
+      position: absolute;
+      top: 26px;
+      right: 17px;
+      width: 28px;
+      height: 4px;
+      transform: rotate(45deg);
+      background-color: @white;
+    }
 
-  .main-menu--opened .main-menu__toggle::after {
-    content: "";
-    line-height: 26px;
-    position: absolute;
-    top: 26px;
-    right: 17px;
-    width: 28px;
-    height: 4px;
-    transform: rotate(-45deg);
-    background-color: @white;
+    &::after {
+      content: "";
+      line-height: 26px;
+      position: absolute;
+      top: 26px;
+      right: 17px;
+      width: 28px;
+      height: 4px;
+      transform: rotate(-45deg);
+      background-color: @white;
+    }
   }
 
   .main-menu--nojs {

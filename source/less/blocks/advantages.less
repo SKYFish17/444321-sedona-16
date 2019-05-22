@@ -45,14 +45,16 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .advantages__header::after {
-    position: absolute;
-    content: "";
-    bottom: -16px;
-    left: 0;
-    width: 320px;
-    height: 37px;
-    background-image: url("../../img/bg-triangle.svg");
+  .advantages__header {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -16px;
+      left: 0;
+      width: 320px;
+      height: 37px;
+      background-image: url("../../img/bg-triangle.svg");
+    }
   }
 }
 

@@ -5,7 +5,7 @@
 
 .form-places__title {
   .indent-reset();
-  margin-bottom: 17px;
+  margin-bottom: 19px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
@@ -13,26 +13,69 @@
 }
 
 .form-places__string {
+  position: relative;
   margin-bottom: 25px;
+  padding-left: 55px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  height: 55px;
 }
 
 .form-places__string:last-child {
   margin-bottom: 0;
 }
 
-.form-places__input {
-  margin-right: 24px;
-  width: 55px;
-  height: 55px;
-}
-
 .form-places__label {
+  margin-left: 23px;
   font-size: 18px;
   font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.form-places__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55px;
+  height: 55px;
+  background-color: @gray;
+  border-radius: 5px;
+}
+
+.form-places__label:hover {
+  &::before {
+    background-color: @deep-gray;
+  }
+}
+
+.form-places__label:active {
+  &::before {
+    background-color: @dark-gray;
+  }
+}
+
+.form-places__input:checked + .form-places__label {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 20px;
+    left: 17px;
+    width: 24px;
+    height: 16px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+}
+
+.form-places__input:checked + .form-places__label:active {
+  &::after {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -58,27 +101,33 @@
   }
 
   .form-places__string {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   .form-places__string:nth-child(1) {
-    margin-right: 71px;
+    margin-right: 66px;
   }
 
   .form-places__string:nth-child(3) {
-    margin-right: 90px;
+    margin-right: 85px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form-places__title {
+    margin-bottom: 42px;
     padding-right: 275px;
     padding-left: 275px;
   }
 
+  .form-places__label {
+    margin-left: 26px;
+    letter-spacing: normal;
+  }
+
   .form-places__wrapper {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0;
+    padding-left: 0;
     justify-content: space-between;
   }
 
@@ -87,7 +136,15 @@
   }
 
   .form-places__string:nth-child(1),
-  .form-places__string:nth-child(3)  {
+  .form-places__string:nth-child(3) {
     margin-right: 0;
+  }
+
+  .form-places__string:nth-child(4) {
+    margin-right: 4px;
+
+    .form-places__label {
+      margin-left: 25px;
+    }
   }
 }
