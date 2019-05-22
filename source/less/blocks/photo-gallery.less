@@ -9,10 +9,11 @@
 
 .photo-gallery__item {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   padding-top: 22px;
-}
 
-.photo-gallery__item {
   &::before {
     content: "";
     position: absolute;
@@ -100,7 +101,7 @@
     padding-top: 0;
     padding-bottom: 0;
     width: 324px;
-    height: 347px;
+    height: auto;
   }
 
   .photo-gallery__item {
