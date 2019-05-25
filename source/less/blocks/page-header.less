@@ -7,7 +7,7 @@
 .page-header__logo {
   position: absolute;
   z-index: 2;
-  bottom: -29px;
+  bottom: -28px;
   left: calc(50% - 51px);
 }
 
@@ -15,11 +15,14 @@
   .page-header {
     min-height: 56px;
   }
+
+  .page-header__logo {
+    top: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    bottom: -41px;
     left: calc(50% - 93.5px);
   }
 
