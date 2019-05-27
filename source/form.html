@@ -13,7 +13,6 @@
     <header class="page-header">
       <nav class="main-menu main-menu--closed main-menu--nojs">
         <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-menu__wrapper">
           <ul class="main-menu__list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">Главная</a>
@@ -25,10 +24,10 @@
               <a class="site-list__link site-list__link--active">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#">HTML Academy</a>
+              <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
-        </div>
+          <div class="main-menu__mock"></div>
       </nav>
       <a class="page-header__logo" href="index.html">
         <picture>
@@ -95,15 +94,15 @@
               <fieldset class="form__effect form-effect">
                 <legend class="form-effect__legend"><h3 class="form-effect__title">Ваше общее впечатление:</h3></legend>
                 <div class="form-effect__string">
-                  <input class="form-effect__input visually-hidden" id="effect__positive-id" name="effect" value="positive" type="radio"  tabindex="1" checked>
+                  <input class="form-effect__input visually-hidden" id="effect__positive-id" name="effect" value="positive" type="radio" checked>
                   <label class="form-effect__label" for="effect__positive-id">Скорее положительное</label>
                 </div>
                 <div class="form-effect__string">
-                  <input class="form-effect__input visually-hidden" id="effect__negative-id" name="effect" value="negative" type="radio" tabindex="2" >
+                  <input class="form-effect__input visually-hidden" id="effect__negative-id" name="effect" value="negative" type="radio"    >
                   <label class="form-effect__label" for="effect__negative-id">Скорее отрицательное</label>
                 </div>
                 <div class="form-effect__string">
-                  <input class="form-effect__input visually-hidden" id="effect__difficult-id" name="effect" value="difficult" type="radio" tabindex="3" >
+                  <input class="form-effect__input visually-hidden" id="effect__difficult-id" name="effect" value="difficult" type="radio">
                   <label class="form-effect__label" for="effect__difficult-id">Затрудняюсь ответить</label>
                 </div>
               </fieldset>
